@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-offset-8 col-xs-4">
+          <form class="loginForm">
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" name="username" id="username" class="form-control" [(ngModel)] = 'username'/>
+              <label>Password</label>
+              <input type="password" id="password" name = "password" class = "form-control" [(ngModel)] = 'password'/>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <button class="btn btn-primary form-control" (click)="submitForm()">Submit</button>
+              </div>
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <a>Forgot Password?</a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
