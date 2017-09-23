@@ -1,3 +1,39 @@
+.loginTemplate {
+  background-color: #233a77;
+}
+.loginTemplate {
+  padding-top: 15%;
+  padding-bottom: 20%;
+}
+
 .loginForm {
-  margin-top: 50%;
+  background-color: rgba(128, 128, 128, 0.48);
+  padding: 5%;
+  border-radius: 5px;
+}
+.loginForm input[type = text] , .loginForm input[type = password] {
+  background-color: #4f5b7b !important;
+  color: white;
+}
+.loginForm label {
+  color: white;
+}
+.loginForm > div:nth-child(2) > div > div > a {
+  color: white;
+}
+.loginForm > div:last-child > div:first-child {
+  padding-right: 5px;
+}
+.loginForm > div:last-child > div:last-child {
+  padding-left: 5px;
+}
+.loginTemplate > div > div > div:first-child {
+  text-align: center;
+}
+.loginTemplate > div > div > div > div:last-child {
+  position: relative;
+  z-index: 100;
+}
+.loginTemplate > div > div > div > div:last-child > img {
+  width: 25%;
 }

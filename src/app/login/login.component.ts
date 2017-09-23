@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticateUserService} from '../services/authenticate-user.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,18 +11,23 @@ export class LoginComponent implements OnInit {
 
   username: string;
   password: string;
-  constructor(private authenticateUser: AuthenticateUserService) { }
+  projectLogo = './assets/image/angularjs.png';
+  constructor(private authenticateUser: AuthenticateUserService, private router: Router) {
+  }
 
   ngOnInit() {
   }
 
   submitForm() {
-    const isValidated = this.validateUserFields(this.username, this.password);
-    //if (isValidated) {
-        this.authenticateUser.getAuthenticatesUser().subscribe((user) => {
-          console.log(user);
-        });
-    //}
+    //const isValidated = this.validateUserFields(this.username, this.password);
+
+    this.authenticateUser.getAuthenticatesUser().subscribe((user) => {
+      console.log(user);
+      this.router.navigateByUrl('/dashboard');
+    });
+  }
+
+  registerUser() {
 
   }
 
