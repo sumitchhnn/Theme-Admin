@@ -19,9 +19,11 @@ export class LoginComponent implements OnInit {
   }
 
   submitForm() {
-    //const isValidated = this.validateUserFields(this.username, this.password);
-
-    this.authenticateUser.getAuthenticatesUser().subscribe((user) => {
+    const payload = {
+      'username' : this.username,
+      'password' : this.password
+    };
+    this.authenticateUser.getAuthenticatesUser(payload).subscribe((user) => {
       console.log(user);
       this.router.navigateByUrl('/dashboard');
     });
